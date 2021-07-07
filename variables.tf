@@ -32,13 +32,3 @@ variable "G4L_HDI_R_ZN_USERNAME" {
 variable "G4L_HDI_R_ZN_PASSWORD" {
   type = string
 }
-
-# variable "instance_type" {
-#   description = "Type of EC2 instance to provision"
-#   default     = "t2.micro"
-# }
-
-# variable "instance_name" {
-#   description = "EC2 instance name"
-#   default     = "Provisioned by Terraform"
-# }

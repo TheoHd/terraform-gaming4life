@@ -58,7 +58,6 @@ resource "azurerm_frontdoor" "g4lifefd"{
   routing_rule {
     name               = "g4lifeRoutingRule1"
     accepted_protocols = [
-      # "Http", 
       "Https"
     ]
     patterns_to_match  = ["/*"]
@@ -240,28 +239,3 @@ resource "azurerm_hdinsight_hadoop_cluster" "g4lifehdic" {
     }
   }
 }
-
-# data "aws_ami" "ubuntu" {
-#   most_recent = true
-
-#   filter {
-#     name   = "name"
-#     values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-#   }
-
-#   filter {
-#     name   = "virtualization-type"
-#     values = ["hvm"]
-#   }
-
-#   owners = ["099720109477"] # Canonical
-# }
-
-# resource "aws_instance" "ubuntu" {
-#   ami           = data.aws_ami.ubuntu.id
-#   instance_type = var.instance_type
-
-#   tags = {
-#     Name = var.instance_name
-#   }
-# }
